@@ -1,0 +1,17 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+model flashcard {
+  id       Int      @id @default(autoincrement())
+  question String
+  answer   String
+  author   String
+  DOC      DateTime
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://neondb_owner:UXprcz8f5nSq@ep-noisy-shape-a5wbiusg.us-east-2.aws.neon.tech/neondb?sslmode=require"
+}
+

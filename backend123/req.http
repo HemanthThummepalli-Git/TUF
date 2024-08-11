@@ -1,0 +1,31 @@
+###
+GET http://localhost:5000/flashcards
+
+###
+GET http://localhost:5000/flashcards/2
+
+###
+POST http://localhost:5000/flashcards
+Content-Type: application/json
+
+{
+    "question":"q2",
+    "answer":"a2",
+    "author":"c1",
+    "DOC":"{{$datetime iso8601}}"
+}
+
+###
+PUT http://localhost:5000/flashcards/2
+Content-Type: application/json
+
+{
+    "question":"q1",
+    "answer":"a1",
+    "author":"c1",
+    "DOC":"{{$datetime iso8601}}"
+}
+
+
+###
+DELETE http://localhost:5000/flashcards/2
